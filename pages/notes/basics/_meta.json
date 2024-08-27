@@ -1,4 +1,18 @@
 {
     "intro": "Introduction to Programming",
-    "variables": "Data & Variables"
+    "variables": "Data & Variables",
+    "objects": "Objects in JavaScript",
+    "arrays": "Arrays in JavaScript",
+    "logics": "Conditional Logics & Operators in JavaScript",
+    "loops": "Iteration",
+    "cli": "Command Line",
+    "git": "Introducing Git",
+    "functions": "Functions & Execution Context",
+    "exports": "Exports & Module",
+    "algorithms": "Algorithms & Problem Solving",
+    "documentation": "Reading the Docs",
+    "arrays&methods": "Array Methods in JavaScript",
+    "debugging": "Errors & Debugging",
+    "html": "Intro to HTML",
+    "css": "Intro to CSS"
 }
