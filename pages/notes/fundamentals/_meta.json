@@ -1,3 +1,21 @@
 {
-    "node": "What is Node"
+    "node": "What is Node",
+    "tests": "Testing",
+    "data&types": "Data Types: Value vs Reference",
+    "scope": "Scope in Functions",
+    "destructure": "Destructuring",
+    "higher&order&functions": "Array Methods & Higher Order Functions",
+    "testing&functions": "Testing Higher Order Functions",
+    "closures": "What are Closures in JavaScript",
+    "recursion": "Recursion in JavaScript",
+    "object&oriented&programming": "this & Object-Oriented Programming",
+    "oop&prototypes": "Object-Oriented Programming Prototypes",
+    "oop&classes": "OOP Classes & Inheritance",
+    "oop&get&set": "OOP Getters & Setters",
+    "oop&solid": "SOLID Principles of OOP",
+    "async": "Asynchronous Operations & Callbacks",
+    "async&callbacks": "Multiple Asynchronous Requests",
+    "promises": "Promises in JavaScript",
+    "async&await": "Async Functions & Await Operator",
+    "internet": "The Internet & Data Fetching"
 }
