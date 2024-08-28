@@ -1,5 +1,9 @@
 {
     "node": "What is Node",
     "tests": "Testing",
-    "data&types": "Data Types: Value vs Reference"
+    "data&types": "Data Types: Value vs Reference",
+    "scope": "Scope in Functions",
+    "destructure": "Destructuring",
+    "higher&order&functions": "Array Methods & Higher Order Functions",
+    "testing&functions": "Testing Higher Order Functions"
 }
