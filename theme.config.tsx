@@ -6,11 +6,10 @@ const config: DocsThemeConfig = {
   logo: (
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <img
-        src="/logo.png"
+        src="/assets/DevUps_Logo.png"
         alt="DevUps Logo"
-        style={{ height: '52px', marginRight: '8px' }}
+        style={{ height: '58px', marginLeft: '8px', marginBottom: '8px' }}
       />
-      <span>DevUps</span>
     </div>
   ),
   project: {
