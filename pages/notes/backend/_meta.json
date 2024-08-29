@@ -1,4 +1,6 @@
 {
     "http&servers": "HTTP Web Clients & Servers",
-    "express": "Express 101"
+    "express": "Express 101",
+    "mvc": "Model View Controller Pattern",
+    "psql&install": "PostgreSQL Installation"
 }
