@@ -1,4 +1,21 @@
 {
     "http&servers": "HTTP Web Clients & Servers",
-    "express": "Express 101"
+    "express": "Express 101",
+    "mvc": "Model View Controller Pattern",
+    "psql&install": "PostgreSQL Installation",
+    "sql": "Intro to SQL",
+    "sql&relationships": "SQL Relationships",
+    "node&postgres": "Node with Postgres",
+    "seeding": "Seeding with node-postgres & pg-format",
+    "postgres&express": "Using node-postgres with Express",
+    "supertest": "Testing with Supertest",
+    "middleware&error": "Middleware & Error Handling",
+    "psql&error": "PostgreSQL Error Handling with Express",
+    "routers&middleware": "Express Routers & Middleware",
+    "database&test&development": "Databases for Testing & Development",
+    "complex&queries": "Complex Queries in PostgreSQL",
+    "git": "Git Branching",
+    "advanced&error": "Advanced Error Handling",
+    "api&hosting": "Hosting a PSQL Database with Supabase & Render",
+    "ci&cd": "Intro to CI/CD: Continuous Integration & Continuous Deployment"
 }
