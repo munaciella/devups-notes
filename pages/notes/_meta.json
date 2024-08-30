@@ -1,5 +1,6 @@
 {
     "basics": "Programming Basics",
     "fundamentals": "JavaScript Fundamentals",
-    "backend": "JavaScript Back-End Development"
+    "backend": "JavaScript Back-End Development",
+    "frontend": "JavaScript Front-End Development"
 }

@@ -8,7 +8,7 @@ const config: DocsThemeConfig = {
       <img
         src="/assets/DevUps_Logo.png"
         alt="DevUps Logo"
-        style={{ height: '58px', marginLeft: '8px', marginBottom: '8px' }}
+        style={{ height: '58px', marginLeft: '2px', marginBottom: '8px' }}
       />
     </div>
   ),
@@ -45,25 +45,7 @@ const config: DocsThemeConfig = {
   },
   head: (
     <Head>
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="180x180"
-        href="public/assets/apple-touch-icon.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="public/assets/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="public/assets/favicon-16x16.png"
-      />
-      <link rel="icon" type="image/x-icon" href="public/assets/favicon.ico" />
+      <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
     </Head>
   ),
 };
