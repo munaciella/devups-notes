@@ -3,5 +3,15 @@
     "dom&forms": "DOM & Form Validation",
     "accessibility": "What is Accessibility in Web Development?",
     "react&intro": "Introduction to React",
-    "react&components": "React Components & Props"
+    "react&components": "React Components & Props",
+    "react&state": "What is React State & Hooks",
+    "react&apps": "How to Plan & Build a React App",
+    "react&lifecycle": "React Lifecycle & State Management",
+    "react&forms": "React Controlled Components & Forms",
+    "data&fetching": "Data Fetching with Fetch API",
+    "axios": "What is Axios",
+    "react&useeffect": "useEffect Hook in React",
+    "react&styling": "React Styling & CSS Modules",
+    "react&router": "React Router & Navigation",
+    "react&context": "React Context API"
 }
