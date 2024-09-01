@@ -13,5 +13,19 @@
     "react&useeffect": "useEffect Hook in React",
     "react&styling": "React Styling & CSS Modules",
     "react&router": "React Router & Navigation",
-    "react&context": "React Context API"
+    "react&context": "React Context API",
+    "ui&rendering": "UI Behaviours & Optimistic Rendering",
+    "cors": "What is CORS",
+    "react&error": "React Error Handling",
+    "react&composition": "React Composition & Higher-Order Components",
+    "react&hooks": "Custom React Hooks",
+    "sort&paginate": "Sorting & Pagination",
+    "class&components": "React Class Based Components",
+    "react&testing": "React Front-End Testing",
+    "react&debug": "React Debugging & Performance",
+    "react&debug&tools": "React Debugging Tools",
+    "react&redux": "What is React Redux",
+    "redux&tools": "Redux Tools & Middleware",
+    "hosting": "React App Hosting",
+    "frontend&cicd": "Front-End CI/CD"
 }

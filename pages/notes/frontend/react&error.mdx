@@ -1,0 +1,116 @@
+# React & Error Handling
+
+## Handling Errors in a Frontend Connected to an API
+
+When working with a frontend connected to an API, sometimes things go wrong. Handling these errors gracefully is crucial for providing a good user experience.
+
+With a well-designed backend, errors will often come with a status code (`4xx` or `5xx`). For instance, consider what would happen if an entity of yours, such as an article, failed to return. How would that impact your render? Would you be trying to access properties that don't exist or are undefined? Worse, would you be accessing properties of _those_ properties, leading to a Type Error?
+
+_Clearly_, we need to handle these situations on the frontend and provide sensible feedback to the user. Simply using `console.log` won't suffice, as we can't expect users to open the console to see what happened.
+
+## Client-Side vs. Server-Side Errors
+
+Errors can occur on either the client side or the server side. Understanding where the error originates helps in deciding how to handle it.
+
+### **Client-Side Errors**
+
+Client-side errors are those that can be detected before a request is sent to the backend. For example, if a form field is empty when it shouldn't be, you know the backend will respond with a `400 Bad Request` status. In this case, you should prevent the request from being sent until all required inputs are filled.
+
+### **Server-Side Errors**
+
+Server-side errors occur when something goes wrong after the request is sent to the backend. These errors could be due to issues such as the server not functioning correctly or an incorrect ID being sent in the request.
+
+Some common errors to look out for:
+
+| **Client-Side Errors**                                                     | **Server-Side Errors**                                                               |
+| -------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Required post information (like `body`) is missing                         | The server isn't functioning as it normally should                                   |
+| The user has navigated to a URL that has no associated page or information | An incorrect ID is entered in the URL, so an article is requested that doesn't exist |
+| Form validation errors (e.g., invalid email format)                        | The request in the URL is badly formatted (e.g., malformed ID)                       |
+|                                                                            | The user isn't authorized to access a resource                                       |
+
+## Default Routes
+
+To handle cases where the user navigates to a URL that has no associated page or information, you can use a catch-all route. In `react-router`, the `Route` component’s `path` attribute can be set to `"*"` to render a specific component for any undefined route.
+
+```jsx
+import { Route } from 'react-router-dom';
+
+<Route path="*" element={<ErrorPage />} />;
+```
+
+This ensures that your users see a helpful error page rather than a blank screen.
+
+## Error Components
+
+Handling API errors in your components involves catching errors during data fetching and then conditionally rendering an error component.
+
+```jsx
+import React, { useState, useEffect } from 'react';
+
+const Page = () => {
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    getData()
+      .then((response) => {
+        // Handle the successful response
+      })
+      .catch((err) => {
+        setError({ err });
+      });
+  }, []);
+
+  if (error) {
+    return <ErrorComponent message={error.err.message} />;
+  }
+
+  return <Content />;
+};
+```
+
+In this example, if the API request fails, we capture the error in the component's state. On the next render, we detect the error and render an `ErrorComponent` instead of the regular content.
+
+## Reusable Error Pages
+
+Rather than creating multiple error pages (e.g., `404ErrorPage`, `400ErrorPage`), you can create a single reusable `ErrorComponent` that adapts based on the error information passed to it.
+
+```jsx
+const ErrorComponent = ({ code, message }) => {
+  let errorMessage;
+
+  switch (code) {
+    case 404:
+      errorMessage = 'Page not found';
+      break;
+    case 500:
+      errorMessage = 'Internal server error';
+      break;
+    default:
+      errorMessage = message || 'An unexpected error occurred';
+  }
+
+  return (
+    <div>
+      <h1>Error {code}</h1>
+      <p>{errorMessage}</p>
+    </div>
+  );
+};
+```
+
+By passing the error code and message to the `ErrorComponent`, you can dynamically display the appropriate error message to the user. This approach helps maintain a consistent user experience and reduces repetitive code.
+
+## Additional Tips for Beginners
+
+1. **Always Validate Input on the Client Side:** Prevent errors by validating user inputs before making a request. This reduces unnecessary server calls and improves the user experience.
+
+2. **Use `try...catch` in Async Functions:** When using `async`/`await`, wrap your logic in a `try...catch` block to handle any potential errors gracefully.
+
+3. **Leverage Error Boundaries:** In React, error boundaries can catch JavaScript errors anywhere in the component tree and display a fallback UI. This is particularly useful for catching errors that might occur during rendering.
+
+4. **Test Your Error Handling:** Simulate different error scenarios to ensure that your application handles them properly. Testing helps you identify any gaps in your error handling strategy.
+
+5. **Provide Clear Feedback to Users:** When an error occurs, give users clear feedback on what went wrong and, if possible, how they can fix it.
+
+By following these practices, you'll be well on your way to building robust, user-friendly React applications.
