@@ -1,6 +1,5 @@
 import React from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
-import Head from 'next/head';
 
 const config: DocsThemeConfig = {
   logo: (
@@ -34,7 +33,6 @@ const config: DocsThemeConfig = {
     defaultMenuCollapseLevel: 1,
     toggleButton: true,
   },
-  //docsRepositoryBase: 'https://github.com/munaciella/devups-notes',
   footer: {
     text: `© ${new Date().getFullYear()} DevUps. All rights reserved.`,
   },
@@ -43,10 +41,44 @@ const config: DocsThemeConfig = {
       titleTemplate: '%s',
     };
   },
-  head: (
-    <Head>
+  head: () => (
+    <>
       <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
-    </Head>
+      <link
+        rel="apple-touch-icon"
+        type='image/png'
+        sizes="180x180"
+        href="/assets/apple-touch-icon.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="32x32"
+        href="/assets/favicon-32x32.png"
+      />
+      <link
+        rel="icon"
+        type="image/png"
+        sizes="16x16"
+        href="/assets/favicon-16x16.png"
+      />
+      <link 
+      rel="icon"
+      type="image/png"
+      sizes="192x192"
+      href="/assets/android-chrome-192x192.png"
+      />
+      <link
+      rel="icon"
+      type="image/png"
+      sizes="512x512"
+      href="/assets/android-chrome-512x512.png"
+      />
+      <link rel="manifest" href="/assets/site.webmanifest"></link>
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="description" content="DevUps Documentation" />
+      <meta name="og:title" content="DevUps Documentation" />
+    </>
   ),
 };
 
