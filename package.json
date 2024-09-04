@@ -5,9 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "postinstall": "pnpm install --no-frozen-lockfile"
-  },
+    "start": "next start"
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/shuding/nextra-docs-template.git"
@@ -25,8 +24,7 @@
     "nextra": "latest",
     "nextra-theme-docs": "latest",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "update": "^0.7.4"
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@types/node": "18.11.10",
