@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { AppProps } from 'next/app';
-import { supabase } from './lib/supabaseClient';
+import { supabase } from '../lib/supabaseClient';
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [user, setUser] = useState<any>(null);
