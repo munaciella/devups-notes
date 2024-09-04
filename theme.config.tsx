@@ -1,5 +1,6 @@
 import React from 'react';
 import { DocsThemeConfig } from 'nextra-theme-docs';
+import Navbar from './pages/components/Navbar';
 
 const config: DocsThemeConfig = {
   logo: (
@@ -80,6 +81,9 @@ const config: DocsThemeConfig = {
       <meta name="og:title" content="DevUps Documentation" />
     </>
   ),
+  // navbar: {
+  //   extraContent: <Navbar />
+  // },
 };
 
 export default config;
